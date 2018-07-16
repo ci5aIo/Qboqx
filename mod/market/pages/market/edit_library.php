@@ -1,0 +1,1 @@
+<?php$guid         = get_input('guid');$entity       = get_entity($guid);$body_vars    = array('entity'=>$entity, 'guid'=>$guid,);$library_content = "forms/market/edit/library";echo elgg_view($library_content, $body_vars);

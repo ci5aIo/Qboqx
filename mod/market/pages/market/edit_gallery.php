@@ -1,0 +1,1 @@
+<?php$guid         = get_input('guid');                               $display .= '03 $guid: '.$guid.'<br>';$entity       = get_entity($guid);$body_vars    = array('entity'=>$entity, 'guid'=>$guid,);$gallery_content = "forms/market/edit/gallery";echo elgg_view($gallery_content, $body_vars);echo $display;

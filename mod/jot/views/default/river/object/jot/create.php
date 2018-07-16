@@ -1,0 +1,3 @@
+<?php
+/** * Jot river view. *//*2018-03-13 - SAJ - View causes errors. Comment out until fixed  * PHP Fatal error:  Call to a member function getObjectEntity() on null in /home/mupy4c83/public_html/quebx_test_elgg_2_3_4/mod/jot/views/default/river/object/jot/create.php on line 7  * PHP Fatal error:  Call to a member function getSubjectEntity() on null in /home/mupy4c83/public_html/quebx_test_elgg_2_3_4/vendor/elgg/elgg/views/default/river/elements/image.php on line 13  *   * Theory: Attempt to retrieve data on removed item causes the above errors.*/ 
+//$object = $vars['object_guid']->getObjectEntity();$excerpt = $vars['message'];$river_vars = $vars;$river_vars['item'] = $object;$river_vars['message']=$excerpt;//echo elgg_view('river/item', $river_vars);

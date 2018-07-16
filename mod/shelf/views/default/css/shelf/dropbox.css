@@ -1,0 +1,259 @@
+/* jQuery Dropdown: A simple dropdown plugin
+ *
+ * Contribute: https://github.com/claviska/jquery-dropdown
+ *
+ * @license: MIT license: http://opensource.org/licenses/MIT
+ *
+ */
+.dropbox {
+  /*position: absolute;*/
+  position: relative;
+  z-index: 1039;
+  display: none;
+}
+.dropbox .dropbox-menu,
+.dropbox .dropbox-panel {
+  min-width: 160px;
+  /*max-width: 360px;*/
+  list-style: none;
+  background: white;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+/*  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
+  overflow: visible;
+  padding: 4px 0;
+  margin: 0;
+/*  text-align: left;*/
+}
+.dropbox .dropbox-panel {
+  padding: 20px;
+}
+.dropbox.dropbox-tip {
+  margin-top: 8px;
+}
+.dropbox.dropbox-tip:before {
+  position: absolute;
+  top: -6px;
+  left: 9px;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ddd;
+  display: inline-block;
+}
+.dropbox.dropbox-tip:after {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  display: inline-block;
+}
+
+table.ledger .dropbox {
+  min-width: 60px;
+  max-width: 150px;
+}
+.dropbox-anchor-right {
+	text-align:left;
+}
+.dropbox.dropbox-tip.dropbox-anchor-right:before {
+  left: auto;
+  right: 9px;
+}
+.dropbox.dropbox-tip.dropbox-anchor-right:after {
+  left: auto;
+  right: 10px;
+}
+.dropbox.dropbox-scroll .dropbox-menu,
+.dropbox.dropbox-scroll .dropbox-panel {
+  max-height: 400px;
+  overflow: auto;
+}
+.dropbox .dropbox-menu li {
+  list-style: none;
+  padding: 0 0;
+  text-indent: 0;
+  margin: 0;
+  line-height: 18px;
+}
+.dropbox .dropbox-menu li > a,
+.dropbox .dropbox-menu label {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  line-height: 18px;
+  padding: 3px 15px;
+  margin: 0;
+  white-space: nowrap;
+}
+.dropbox .dropbox-menu li>a:hover, 
+.dropbox .dropbox-menu label:hover {
+    background-color: #f2f2f2;
+    color: inherit;
+    cursor: pointer;
+}
+.dropbox .dropbox-menu .dropbox-divider {
+  font-size: 1px;
+  border-top: solid 1px #e5e5e5;
+  padding: 0;
+  margin: 5px 0;
+}
+
+/******************
+ * 
+ *
+********************/
+.dropbox .dropbox-menu li>a.done:hover{
+    background-color: inherit;
+    color: inherit;
+    cursor: none;
+}
+.qbox-dropdown {
+  position: absolute;
+  z-index: 1039;
+  display: none;
+}
+.qbox-dropdown .qbox-dropdown-menu,
+.qbox-dropdown .qbox-dropdown-panel {
+  min-width: 160px;
+  max-width: 360px;
+  list-style: none;
+  background: white;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  padding: 4px 0;
+  margin: 0;
+/*  text-align: left;*/
+}
+.qbox-dropdown .qbox-dropdown-panel {
+  padding: 10px;
+}
+.qbox-dropdown.qbox-dropdown-tip {
+  margin-top: 8px;
+}
+.qbox-dropdown.qbox-dropdown-tip:before {
+  position: absolute;
+  top: -6px;
+  left: 9px;
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ddd;
+  display: inline-block;
+}
+.qbox-dropdown.qbox-dropdown-tip:after {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  content: "";
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  display: inline-block;
+}
+
+table.ledger .qbox-dropdown {
+  min-width: 60px;
+  max-width: 150px;
+}
+.qbox-dropdown-anchor-right {
+    text-align:left;
+}
+.qbox-dropdown.qbox-dropdown-tip.qbox-dropdown-anchor-right:before {
+  left: auto;
+  right: 9px;
+}
+.qbox-dropdown.qbox-dropdown-tip.qbox-dropdown-anchor-right:after {
+  left: auto;
+  right: 10px;
+}
+.qbox-dropdown.qbox-dropdown-scroll .qbox-dropdown-menu,
+.qbox-dropdown.qbox-dropdown-scroll .qbox-dropdown-panel {
+  max-height: 400px;
+  overflow: auto;
+}
+.qbox-dropdown .qbox-dropdown-menu li {
+  list-style: none;
+  padding: 0 0;
+  text-indent: 0;
+  margin: 0;
+  line-height: 18px;
+}
+.qbox-dropdown .qbox-dropdown-menu li > a,
+.qbox-dropdown .qbox-dropdown-menu label {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  line-height: 18px;
+  padding: 3px 15px;
+  margin: 0;
+  white-space: nowrap;
+}
+.qbox-dropdown .qbox-dropdown-menu li>a:hover, 
+.qbox-dropdown .qbox-dropdown-menu label:hover {
+    background-color: #f2f2f2;
+    color: inherit;
+    cursor: pointer;
+}
+.qbox-dropdown .qbox-dropdown-menu .qbox-dropdown-divider {
+  font-size: 1px;
+  border-top: solid 1px #e5e5e5;
+  padding: 0;
+  margin: 5px 0;
+}
+.dropbox .dropbox-panel .qbox-pallet,
+         .dropbox-panel .qbox-pallet {
+    min-width:500px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.quebx-compartment-labels {
+    min-width:500px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.qbox-drop{
+    min-height: 30px;
+    order: 2;
+    flex-basis: 32.5%;
+    border: 1px solid grey;
+    text-align:center;
+}
+/*label for the drop box*/
+.qbox-drop:empty:not(:focus):before{
+    content:attr(data-aspect);
+}
+.qbox-drop:hover, 
+.ui-droppable-hover{
+    background: #fbf9ee;
+    color: #363636;
+}
+.compartment-open {
+    display: block;
+}
+.compartment-closed {
+    display: none;
+}
+.compartment-contents-header, 
+.compartment-components-header, 
+.compartment-accessories-header {
+    font-weight: bold;
+}
+.compartment-content-item, 
+.compartment-component-item, 
+.compartment-accessory-item {
+    list-style-type: disc;
+    margin-left: 15px;
+    whitespace: nowrap;
+}
+span.qbox-pallet-label{
+	position:absolute;
+	top:2px;
+	left:10px;
+    font-size: smaller;
+}

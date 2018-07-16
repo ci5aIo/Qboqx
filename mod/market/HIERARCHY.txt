@@ -1,0 +1,67 @@
+This version of the market plugin includes changes to allow for hierarchical
+assets.
+
+The hierarchy is as follows:
+
+marketcategory
+family
+parent
+individual
+element
+
+When you create a basic asset, you specify the title, description,
+marketcategory, tags, image, and access.
+
+The possible market categories are defined in the market plugin settings.
+
+Depending upon the marketcategory selected and the available form definitions, 
+the user can optionally add additional information when adding or editing 
+an asset.
+
+In order to define a level in the hierarchy, you need to define an edit form
+and a display view. These will then be automatically picked up by the system.
+
+The edit forms should be located in the views/default/forms/market/edit 
+directory.
+
+The display views should be located in the views/default/market/display
+directory.
+
+There is one included example directory for a "shoes" marketcategory. This
+supports two "shoes" family levels: running and dress.
+
+The main shoes form is in:
+
+ views/default/forms/market/edit/shoes.php
+ 
+ and the family sublevel forms are defined in
+ 
+ views/default/forms/market/edit/shoes/running.php
+ and
+ views/default/forms/market/edit/shoes/dress.php
+ 
+ If you wanted to continue the hierarchy to the parent level 
+ (say for men and women) these forms would be in, for example
+ 
+ views/default/forms/market/edit/shoes/dress/men.php
+ and
+ views/default/forms/market/edit/shoes/dress/women.php
+ 
+ and the dress.php form would need to define a "parent" field
+ with possible values men or women.
+ 
+ The display views are organized in a similar hierarchical way.
+
+
+ Textual data can be saved automatically by the system, this includes arrays of values.
+ Relationships and file uploads need to be handled on a per-form basis, in this case a custom action
+ needs to be defined.  To do this simply create the file in the pattern of /actions/custom/[category]/[level].php
+ So for example if custom processing needs to happen at the family level of a category called 'car', then you would
+ create a php file to handle that at the location /actions/custom/car/family.php
+ The car category contains examples of all types of inputs, single string, multiple string arrays, relationships,
+ and file uploads.  The file upload system has been modified to be as easy to understand as possible, with copy/paste
+ code and a single metadata point storing the file location.
+
+ The edit url of items may be different for different categories (they will be for any following this logic) and they
+ can be set in switch statement of the function market_entity_menu in start.php
+ See there for an example (the car category)

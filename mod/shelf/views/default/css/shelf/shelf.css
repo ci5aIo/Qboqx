@@ -1,0 +1,27 @@
+.elgg-menu .elgg-form-shelf-load { max-width: 140px; display: inline-block; vertical-align: middle; margin-left: 20px; text-align: right; }
+.elgg-menu .elgg-form-shelf-load [class*="shelf-col"] { padding: 0; }
+
+[data-shelf-indicator]:not([data-shelf-indicator="0"]):after { display: block; content: attr(data-shelf-indicator); color: #FFF; background-color: #FF0000; border-radius: 10px; box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5); position: absolute; text-align: center; line-height: 14px; top: 4px; left: 26px; min-width: 16px; height: 16px; font-size: 10px; font-weight: bold; }
+
+.shelf-table th { padding: 5px; text-align: right; }
+.shelf-table td { text-align: right; padding: 5px; }
+.shelf-table .shelf-checkout-item-description { text-align: left; }
+.shelf-table .shelf-checkout-tax td { font-size: 90%; }
+.shelf-table .shelf-checkout-total td { font-size: 110%; font-weight: bold; }
+.shelf-table .shelf-checkout-item-quantity input[type="text"] { font-size: 90%; width: 35px; }
+
+.shelf-load { display: flex; flex-flow: row nowrap; align-items: center; }
+.shelf-load > div { padding: 5px; }
+
+.shelf-image-block { padding: 0; }
+
+.shelf-checkout-shop { padding: 5px; }
+
+.shelf-accepts { display: inline-block; margin-right: 5px; padding: 0; max-height: 16px; width: auto; }
+
+.shelf-payment-method-picker > div { display: flex; align-items: center; margin-top: 5px; }
+.shelf-payment-method-picker > div > * { padding: 3px; }
+.shelf-payment-method-picker > div > img { max-height: 20px; width: auto; }
+
+.shelf-list-items{background:white;max-width: 210px;}
+.shelf-float {position: fixed;top: 0;z-index: 2;}

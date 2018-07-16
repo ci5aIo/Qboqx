@@ -1,0 +1,30 @@
+{
+	"name": "hypejunction/cart",
+	"type": "elgg-plugin",
+	"description": "Shopping Cart",
+	"homepage": "http://hypejunction.com",
+	"keywords": [
+		"elgg", "plugin", "e-commerce", "cart", "shopping"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "info@hypejunction.com"
+		}
+	],
+	"require": {
+		"php": ">=5.5",
+		"hypejunction/payments": "~1.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-0": {
+			"": "tests/"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "hypejunction/hypefilestore",
+	"type": "elgg-plugin",
+	"description": "Upload handler",
+	"homepage": "http://hypejunction.com",
+	"keywords": [
+		"elgg", "plugin", "uploads"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "ismayil.khayredinov@gmail.com"
+		}
+	],
+	"extra": {
+		"installer-name": "hypeFilestore"
+	},
+	"require": {
+		"php": ">=5.4",
+		"ext-json": "*",
+		"ext-xml": "*",
+		"ext-curl": "*",
+		"composer/installers": "1.*"
+	}
+}
+

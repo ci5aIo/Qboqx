@@ -1,0 +1,10 @@
+= Version history =
+
+2015.02.20:
+
+- fix: updated deprecated function getFriends();
+- fix: added js to prevent double form submission
+
+2014.05.02:
+
+- Initial release for Elgg 1.9
